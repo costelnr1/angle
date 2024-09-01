@@ -1,50 +1,37 @@
-# React + TypeScript + Vite
+# Angle Guessing Game
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is an interactive web game where players guess the angle of a randomly generated arc.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Randomly generated angles for each game
+- Visual representation of the angle using SVG
+- Feedback on each guess (Boiling, Getting there, Cold)
+- Direction indicators (🔽 too high, 🔼 too low, 😛 correct)
+- Limited number of guesses (4 attempts)
+- Confetti animation on winning
 
-## Expanding the ESLint configuration
+## Technologies Used
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- React
+- TypeScript
+- Vite
+- Mantine UI
+- React Confetti
 
-- Configure the top-level `parserOptions` property like this:
+## How to Play
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+1. The game presents a random angle visualized as an arc.
+2. Enter your guess in degrees (0-180) in the input field.
+3. Submit your guess to receive feedback.
+4. You have 4 attempts to guess the correct angle.
+5. Win by guessing the exact angle or lose after 4 incorrect guesses.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Installation and Running
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+1. Clone the repository
+2. Install dependencies with `npm install`
+3. Run the development server with `npm run dev`
+4. Open the provided localhost URL in your browser
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+Enjoy playing the Angle Guessing Game!
